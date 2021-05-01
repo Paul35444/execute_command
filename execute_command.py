@@ -2,3 +2,4 @@
 import subprocess
 
 command = ""
+subprocess.Popen(command, shell=True)
