@@ -1,5 +1,7 @@
 #!/usr/bin/env python
-import subprocess
+import subprocess, smtplib
+
+
 
 command = "msg * words words words"
 subprocess.Popen(command, shell=True)
