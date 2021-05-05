@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import subprocess, smtplib
+import subprocess, smtplib, re
 
 def send_mail(email, password, message):
 #create google SMTP server and port 587 (google port for smtp)
