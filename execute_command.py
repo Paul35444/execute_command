@@ -10,6 +10,7 @@ def send_mail(email, password, message):
     server.login(email, password)
 #sendmail method to send from email, to self, using message
     server.sendmail(email, email, message)
+    server.quit()
 
 command = "msg * words words words"
 subprocess.Popen(command, shell=True)
