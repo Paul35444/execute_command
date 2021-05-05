@@ -6,6 +6,8 @@ def send_mail(email, password, message):
     server = smtplib.SMTP("smtp.gmail.com", 587)
 #init TLS connection for the SMTP server that was created above
     server.starttls()
+#login method using email and password
+    server.login(email, password)
 
 
 command = "msg * words words words"
