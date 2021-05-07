@@ -18,6 +18,8 @@ networks = subprocess.check_output(command, shell=True)
 #.* to match ANY chars
 network_names_list = re.findall("(Profile\s*:\s)(.*)", networks)
 
+result = ""
+
 for network_name in network_names_list:
     command = "netsh wlan show profile " + network_name + " key=clear"
     current_result = subprocess.check_output(command, shell=True)
